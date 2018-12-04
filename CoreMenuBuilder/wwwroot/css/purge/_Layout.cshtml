@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/qjc0tja.css">
+    <link rel="stylesheet" asp-append-version="true" href="~/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" asp-append-version="true" href="~/lib/kendo-ui/styles/kendo.common.min.css" />
+
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+          asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+          asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+   
+    <link rel="stylesheet" asp-append-version="true" href="~/css/site.css" />
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+            crossorigin="anonymous"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+    </script>
+
+</head>
+<body class="site @(ViewContext.RouteData.Values["Area"]?.ToString().ToLower())">
+    <div id="header" class="header">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x align-middle">
+            </div>
+        </div>
+        <div class="grid-container separator hide-for-small-only">
+            <hr />
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content-page">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row collapse">
+            <div class="small-12 medium-12 columns align-self-bottom">
+                <ul class="vertical medium-horizontal menu align-left">
+                    <li><a href="/home/about" title="About">About</a></li>
+                    <li><a href="/home/contact" title="Contact">Contact</a></li>
+                    <li><a href="/home/privacy" title="Privacy">Privacy</a></li>
+                </ul>
+                <ul class="small-vertical menu align-left">
+                    <li>
+                        <small><a class="copyright" href="http://www.kolaberate.com">© @DateTime.Now.Year Kolaberate Software</a></small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

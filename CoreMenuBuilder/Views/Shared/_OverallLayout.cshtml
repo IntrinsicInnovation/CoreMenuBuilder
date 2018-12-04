@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<div class="grid-container">
+     @*Top menu here if you need it*@
+</div>
+<div class="grid-container" style="padding-left:0">
+    <div class="grid-x">
+        <div class="small-2" style="padding-right: 5px">
+            <partial name="_SideMenu" />
+        </div>
+        <div class="small-10">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@RenderSection("Scripts", required: false)
+
+@*Include your scripts to be called from the menu here: *@
+<script type="text/javascript" asp-append-version="true" src="~/js/menuhelper.js"></script>
